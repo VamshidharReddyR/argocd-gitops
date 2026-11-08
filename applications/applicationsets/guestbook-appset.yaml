@@ -14,7 +14,7 @@ spec:
 
   template:
     metadata:
-      name: 'guestbook-{{environment}}'
+      name: "guestbook-{{environment}}"
 
     spec:
       project: guestbook-project
@@ -32,3 +32,8 @@ spec:
         automated:
           prune: true
           selfHeal: true
+          allowEmpty: false
+
+        syncOptions:
+          - CreateNamespace=true
+          - ServerSideApply=true
